@@ -8,6 +8,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import LockOpenRoundedIcon from '@material-ui/icons/LockOpenRounded';
+import { IconButton } from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -24,22 +26,43 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
     },
+
+    navbarButton: {
+      margin: theme.spacing(1),
+      [theme.breakpoints.down('xs')]: {
+        display: 'none',
+      }
+    },
+
+    navbarIconButton: {
+      margin: theme.spacing(1),
+      [theme.breakpoints.up('sm')]: {
+        display: 'none', 
+
+      }
+    },
   })
 );
 
-export default function Navbar() {
+export default function Navbar(props: any) {
   const classes = useStyles();
 
   return (
     <div>
       <div className={classes.root}>
         <div className={classes.appBar}>
-        <AppBar color='primary' position="fixed">
+        <AppBar color='default' position="fixed">
           <Toolbar>
+            {props.children}
+            
             <Typography variant="h4" className={classes.title}>
               BCalender
             </Typography>
-            <Button color="inherit">Login</Button>
+            <Button size="large"  className={classes.navbarButton} variant="outlined" color="primary">Регистрация</Button>
+            <Button size="large"  className={classes.navbarButton} variant="outlined" color="primary">Логин</Button>
+            <IconButton  className={classes.navbarIconButton} aria-label='login'>
+              <LockOpenRoundedIcon />
+            </IconButton>
           </Toolbar>
         </AppBar>
       </div>
