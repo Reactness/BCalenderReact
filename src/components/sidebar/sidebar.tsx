@@ -1,11 +1,9 @@
 import React from 'react';
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -18,7 +16,7 @@ const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
+    sidebar: {
       display: 'flex',
 
     },
@@ -48,13 +46,13 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function ClippedDrawer() {
+export default function Sidebar() {
   const classes = useStyles();
 
   return (
 
-    <div>
-    <div className={classes.root}>
+  <div>
+    <div className={classes.sidebar}>
       <CssBaseline />
       <Drawer
         className={classes.drawer}
@@ -88,7 +86,6 @@ export default function ClippedDrawer() {
       </Drawer>
 
     </div>
-   
     </div>
   );
 }

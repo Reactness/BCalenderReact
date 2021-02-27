@@ -1,20 +1,14 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/navbar/navbar'
-import Paper from "./components/paper/paper";
-import  Sidebar  from "./components/sidebar/sidebar";
+import React from "react";
+import "./App.css";
+import Navbar from "./components/navbar/navbar";
+import SearchPage from "./pages/search/index";
 
 function App() {
   return (
-    
-    <React.Fragment>   
+    <>
       <Navbar/>
-      
-    <Paper></Paper>
-    </React.Fragment>
-
-   
-   
+      <SearchPage/>
+    </>
   );
 }
 

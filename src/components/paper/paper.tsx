@@ -1,12 +1,11 @@
 import React from 'react';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import  Sidebar from "./../sidebar/sidebar";
 
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
+    paper: {
       display: 'flex',
       flexWrap: 'wrap',
       '& > *': {
@@ -25,11 +24,10 @@ export default function SimplePaper(props: any) {
   const classes = useStyles();
 
   return (
-    <div>
-    <div className={classes.root}>
-      <Paper>
-<Sidebar/></Paper>
-    </div>
-    </div>
+    <div className={classes.paper}>
+      <Paper children={props.children}/>
+      </div>
+
   );
 }
+
