@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
      appBar: {
       // zIndex: theme.zIndex.drawer + 1,
-      marginBottom: theme.spacing(8)
+      marginBottom: theme.spacing(8),
     },
 
     title: {
@@ -34,7 +34,7 @@ export default function Navbar() {
     <div>
       <div className={classes.root}>
         <div className={classes.appBar}>
-        <AppBar color="default" position="fixed">
+        <AppBar color='primary' position="fixed">
           <Toolbar>
             <Typography variant="h4" className={classes.title}>
               BCalender
