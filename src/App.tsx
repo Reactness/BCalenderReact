@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/navbar";
 
 function App() {
   return (
+  //// comments 1
     <>
       <Switch>
         <Route path="/search">
